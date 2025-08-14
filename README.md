@@ -1,6 +1,6 @@
 # Task Manager
 
-Aplicação web educacional desenvolvida em **Flask** para gerenciar tarefas (*Create, Read, Update, Delete*).  
+Aplicação web educacional desenvolvida em **Flask** para gerenciar tarefas (*Create, Read, Update, Delete*) com implementação de **testes automatizados** usando **Pytest**..  
 O projeto foi criado como parte dos estudos de **APIs REST**, **métodos HTTP**, **Postman** e **Swagger Editor**, aplicando conceitos aprendidos durante as aulas.  
 
 Além do código, este repositório inclui **anotações teóricas detalhadas** que explicam os fundamentos utilizados no desenvolvimento.
@@ -10,6 +10,8 @@ Além do código, este repositório inclui **anotações teóricas detalhadas** 
 ##  Tecnologias utilizadas
 - [Python](https://www.python.org/)
 - [Flask](https://flask.palletsprojects.com/)
+- [Pytest](https://docs.pytest.org/)
+- [Requests](https://docs.python-requests.org/)
 - API REST
 - Postman
 - Swagger Editor
@@ -24,6 +26,8 @@ Além do código, este repositório inclui **anotações teóricas detalhadas** 
 - **Stateless** e **Cache** no contexto de APIs.
 - **Endpoints**: URLs específicas para manipulação de recursos.
 - **Códigos de resposta HTTP** (1xx, 2xx, 3xx, 4xx, 5xx).
+- **Pytest**: framework para testes automatizados.
+- **Biblioteca Requests**: utilizada para consumir endpoints durante os testes.
 
 As anotações completas estão no arquivo [`ANOTACOES.py`](./ANOTACOES.py).
 
@@ -38,6 +42,20 @@ As anotações completas estão no arquivo [`ANOTACOES.py`](./ANOTACOES.py).
 
 ---
 
+##  Testes automatizados
+O projeto conta com testes automatizados criados com **Pytest** que validam:
+1. Criação de tarefa
+2. Listagem de tarefas
+3. Obtenção de tarefa específica
+4. Atualização de tarefa
+5. Exclusão de tarefa
+
+Para rodar os testes, é necessário:
+1. Ter o servidor Flask rodando (`python app.py`)
+2. Executar:
+   ```bash
+   pytest -v
+    ```
 ##  Como executar o projeto
 
 1. **Clonar o repositório**
@@ -55,7 +73,7 @@ As anotações completas estão no arquivo [`ANOTACOES.py`](./ANOTACOES.py).
 3. Instalar dependências
 
     ```bash
-    pip install flask
+    pip install flask pytest requests
     ```
 4. Executar o servidor
     ```bash
